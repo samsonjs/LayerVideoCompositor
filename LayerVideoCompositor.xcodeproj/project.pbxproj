@@ -12,6 +12,9 @@
 		7B426AC01DDD559D002E94E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B426ABE1DDD559D002E94E7 /* Main.storyboard */; };
 		7B426AC21DDD559D002E94E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B426AC11DDD559D002E94E7 /* Assets.xcassets */; };
 		7B426AC51DDD559D002E94E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B426AC31DDD559D002E94E7 /* LaunchScreen.storyboard */; };
+		7B426ACE1DDD5647002E94E7 /* LayerVideoCompositionInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B426ACC1DDD5647002E94E7 /* LayerVideoCompositionInstruction.swift */; };
+		7B426ACF1DDD5647002E94E7 /* LayerVideoCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B426ACD1DDD5647002E94E7 /* LayerVideoCompositor.swift */; };
+		7B426AD11DDD5739002E94E7 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7B426AD01DDD5739002E94E7 /* video.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		7B426AC11DDD559D002E94E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B426AC41DDD559D002E94E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B426AC61DDD559D002E94E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B426ACC1DDD5647002E94E7 /* LayerVideoCompositionInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerVideoCompositionInstruction.swift; sourceTree = "<group>"; };
+		7B426ACD1DDD5647002E94E7 /* LayerVideoCompositor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerVideoCompositor.swift; sourceTree = "<group>"; };
+		7B426AD01DDD5739002E94E7 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		7B426AB91DDD559D002E94E7 /* LayerVideoCompositor */ = {
 			isa = PBXGroup;
 			children = (
+				7B426AD01DDD5739002E94E7 /* video.mov */,
+				7B426ACC1DDD5647002E94E7 /* LayerVideoCompositionInstruction.swift */,
+				7B426ACD1DDD5647002E94E7 /* LayerVideoCompositor.swift */,
 				7B426ABA1DDD559D002E94E7 /* AppDelegate.swift */,
 				7B426ABC1DDD559D002E94E7 /* ViewController.swift */,
 				7B426ABE1DDD559D002E94E7 /* Main.storyboard */,
@@ -97,6 +106,7 @@
 					7B426AB61DDD559D002E94E7 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = X45WPY5JFZ;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B426AD11DDD5739002E94E7 /* video.mov in Resources */,
 				7B426AC51DDD559D002E94E7 /* LaunchScreen.storyboard in Resources */,
 				7B426AC21DDD559D002E94E7 /* Assets.xcassets in Resources */,
 				7B426AC01DDD559D002E94E7 /* Main.storyboard in Resources */,
@@ -137,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B426ACF1DDD5647002E94E7 /* LayerVideoCompositor.swift in Sources */,
 				7B426ABD1DDD559D002E94E7 /* ViewController.swift in Sources */,
+				7B426ACE1DDD5647002E94E7 /* LayerVideoCompositionInstruction.swift in Sources */,
 				7B426ABB1DDD559D002E94E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,11 +274,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X45WPY5JFZ;
 				INFOPLIST_FILE = LayerVideoCompositor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.gurulogic.LayerVideoCompositor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,8 +290,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X45WPY5JFZ;
 				INFOPLIST_FILE = LayerVideoCompositor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.gurulogic.LayerVideoCompositor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +320,7 @@
 				7B426ACB1DDD559D002E94E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
